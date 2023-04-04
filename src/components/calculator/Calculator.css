@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    background: #17171c;
+    margin: 100px auto;
+    width: 300px;
+    height: 550px;
+    border-radius: 39px;
+}
+
+.switch {
+    color: #fff;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.button {
+    background: #2e2f38;
+    border-radius: 24px;
+    color: #fff;
+    width: 62px;
+    height: 62px;
+}
+
+.history {
+    background: #17171c;
+    font-size: 15px;
+    color: #fff;
+}
+
+.result {
+    background: #17171c;
+    color: #fff;
+}
+
+.button-gray {
+    background: #4e505f;
+}
+
+.button:hover {
+    background: #4b5efc;
+    transition: all ease 0.25s;
+}
+
+.button-blue {
+    background: #4b5efc;
+}
+
+.button-blue:hover {
+    background: #4e505f;
+    transition: all ease 0.25s;
+}

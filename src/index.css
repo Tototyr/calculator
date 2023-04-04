@@ -1,0 +1,46 @@
+.layout.light .container {
+    background: #e5e5e5;
+    color: #000000;
+}
+
+.layout.light .switch {
+    color: #000000;
+}
+
+.layout.light .result {
+    background: #e5e5e5;
+    color: #000000;
+}
+
+.layout.light .history {
+    background: #e5e5e5;
+    color: #000000;
+}
+
+.layout.light .button {
+    color: #000000;
+    background: #ffffff;
+}
+
+.layout.light .button-gray {
+    background: #4e505f;
+}
+
+.layout.light .button-blue {
+    background: #4b5efc;
+}
+
+.layout.light .button:hover{
+    background: #4b5efc;
+    transition: all ease 0.25s;
+}
+
+.layout.light .button-gray:hover {
+    background: #4b5efc;
+    transition: all ease 0.25s;
+}
+
+.layout.light .button-blue:hover {
+    background: #4e505f;
+    transition: all ease 0.25s;
+}
