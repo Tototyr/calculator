@@ -7,22 +7,24 @@ export const useCalculator = () => {
     const [history, setHistory] = useState([]);
 
     const handleNumberClick = (number) => {
-        if (result === '0') {
-            setResult(number);
-        } else if (number === '.' && result.indexOf('.') === -1) {
+        if (result === 0 && number !== '.') {
+            setResult(parseFloat(number));
+        } else if (number === '.' && result.toString().indexOf('.') === -1) {
             setResult(`${result}${number}`);
-        } else if (number !== '.') {
-            setResult(`${result}${number}`);
+        } else if (number !== '.' && result !== 0) {
+            setResult(parseFloat(`${result}${number}`));
+        } else if (number !== '.' && result === 0) {
+            setResult(parseFloat(number));
         }
     };
 
     const handlePlusMinusClick = () => {
-        setResult((parseFloat(result) * -1).toString());
+        setResult(parseInt(result) * -1);
     };
 
     const handleOperationClick = (operation) => {
-        setPreviousValue(parseInt(result));
-        setResult('0');
+        setPreviousValue(result);
+        setResult(0);
         setOperation(operation);
     };
 
@@ -47,12 +49,16 @@ export const useCalculator = () => {
         } else if (operation === '*') {
             return Math.round(previousValue * currentValue);
         } else if (operation === '/') {
-            return Math.round(previousValue / currentValue);
+            if (currentValue === 0) {
+                return '0';
+            } else {
+                return Math.round(previousValue / currentValue);
+            }
         }
     };
 
     const handleEqualClick = () => {
-        const currentValue = parseInt(result);
+        const currentValue = parseFloat(result);
 
         let calculation = {
             previousValue: previousValue,
@@ -61,13 +67,17 @@ export const useCalculator = () => {
         };
 
         if (operation === '+') {
-            setResult(Math.round(previousValue + currentValue));
+            setResult(previousValue + currentValue);
         } else if (operation === '-') {
-            setResult(Math.round(previousValue - currentValue));
+            setResult(previousValue - currentValue);
         } else if (operation === '*') {
-            setResult(Math.round(previousValue * currentValue));
+            setResult(previousValue * currentValue);
         } else if (operation === '/') {
-            setResult(Math.round(previousValue / currentValue));
+            if (currentValue === 0) {
+                setResult(0);
+            } else {
+                setResult(previousValue / currentValue);
+            }
         }
 
         setOperation(null);
