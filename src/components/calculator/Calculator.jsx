@@ -1,12 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import './Calculator.css';
 
-import { useTheme } from '../hooks/useTheme';
 import { useCalculator } from '../hooks/useCalculator';
+import Button from '../buttons/Button';
 
 export const Calculator = () => {
-    const { isLight, setisLight } = useTheme();
-
     const {
         result,
         history,
@@ -22,12 +20,6 @@ export const Calculator = () => {
 
     return (
         <div className="container mx-auto px-3 py-4 grid grid-cols-4 gap-1">
-            <button
-                className="switch col-span-4 text-1xl font-bold text-right"
-                onClick={toggleTheme}
-            >
-                Change theme
-            </button>
             <div className="history col-span-4 mb-2 text-4xl font-bold text-right">
                 {history.map((calculation, index) => (
                     <div className="history" key={index}>
@@ -37,78 +29,82 @@ export const Calculator = () => {
                 ))}
             </div>
             <div className="result col-span-4 mb-4 text-4xl font-bold text-right">{result}</div>
-            <button className="button button-gray text-2xl" onClick={() => handleClearClick()}>
+            <Button className="button button-gray text-2xl" onClick={handleClearClick}>
                 C
-            </button>
-            <button className="button button-gray text-2xl" onClick={() => handlePlusMinusClick()}>
+            </Button>
+            <Button className="button button-gray text-2xl" onClick={handlePlusMinusClick}>
                 +/-
-            </button>
-            <button className="button button-gray text-2xl" onClick={() => handlePrecentClick()}>
+            </Button>
+            <Button className="button button-gray text-2xl" onClick={handlePrecentClick}>
                 %
-            </button>
-            <button
+            </Button>
+            <Button
                 className="button button-blue text-2xl"
-                onClick={() => handleOperationClick('/')}
+                onClick={handleOperationClick}
+                value={'/'}
             >
                 /
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(7)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={7}>
                 7
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(8)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={8}>
                 8
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(9)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={9}>
                 9
-            </button>
-            <button
+            </Button>
+            <Button
                 className="button button-blue text-2xl"
-                onClick={() => handleOperationClick('*')}
+                onClick={handleOperationClick}
+                value={'*'}
             >
-                x
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(4)}>
+                *
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={4}>
                 4
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(5)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={5}>
                 5
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(6)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={6}>
                 6
-            </button>
-            <button
+            </Button>
+            <Button
                 className="button button-blue text-2xl"
-                onClick={() => handleOperationClick('-')}
+                onClick={handleOperationClick}
+                value={'-'}
             >
                 -
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(1)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={1}>
                 1
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(2)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={2}>
                 2
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(3)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={3}>
                 3
-            </button>
-            <button
+            </Button>
+            <Button
                 className="button button-blue text-2xl"
-                onClick={() => handleOperationClick('+')}
+                onClick={handleOperationClick}
+                value={'+'}
             >
                 +
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick('.')}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={'.'}>
                 .
-            </button>
-            <button className="button text-2xl" onClick={() => handleNumberClick(0)}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleNumberClick} value={'0'}>
                 0
-            </button>
-            <button className="button text-2xl" onClick={() => handleBackspaceClick()}>
+            </Button>
+            <Button className="button text-2xl" onClick={handleBackspaceClick}>
                 del
-            </button>
-            <button className="button button-blue text-2xl" onClick={() => handleEqualClick()}>
+            </Button>
+            <Button className="button button-blue text-2xl" onClick={handleEqualClick}>
                 =
-            </button>
+            </Button>
         </div>
     );
 };

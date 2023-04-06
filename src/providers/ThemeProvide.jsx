@@ -1,9 +1,14 @@
-import { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-export const ThemeContext = createContext({
+const ThemeContext = createContext({
     isLight: true,
     toggleTheme: () => {},
 });
+
+export const useTheme = () => {
+    const value = useContext(ThemeContext);
+    return value;
+};
 
 export const ThemeProvider = ({ children }) => {
     const [isLight, setIsLight] = useState(true);

@@ -1,5 +1,17 @@
+:root {
+    --accent-dark: #17171c;
+    --accent-light: #e5e5e5;
+
+
+    --button-blue: #4b5efc;
+    --button-gray: #4e505f;
+    --button-dark: #2e2f38;
+    --button-white: #ffffff;
+}
+
+
 .layout.light .container {
-    background: #e5e5e5;
+    background:  var(--accent-light);
     color: #000000;
 }
 
@@ -8,39 +20,39 @@
 }
 
 .layout.light .result {
-    background: #e5e5e5;
+    background:  var(--accent-light);
     color: #000000;
 }
 
 .layout.light .history {
-    background: #e5e5e5;
+    background: var(--accent-light);
     color: #000000;
 }
 
 .layout.light .button {
     color: #000000;
-    background: #ffffff;
+    background: var(--button-white);
 }
 
 .layout.light .button-gray {
-    background: #4e505f;
+    background:  var(--button-gray);
 }
 
 .layout.light .button-blue {
-    background: #4b5efc;
+    background:  var(--button-blue);
 }
 
 .layout.light .button:hover{
-    background: #4b5efc;
+    background:   var(--button-blue);
     transition: all ease 0.25s;
 }
 
 .layout.light .button-gray:hover {
-    background: #4b5efc;
+    background:   var(--button-blue);
     transition: all ease 0.25s;
 }
 
 .layout.light .button-blue:hover {
-    background: #4e505f;
+    background:  var(--button-gray);
     transition: all ease 0.25s;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
-import { useTheme } from '../hooks/useTheme';
+
+import './Layout.css';
+import { useTheme } from '../../providers/ThemeProvide';
 
 export const Layout = ({ children }) => {
     const { isLight, toggleTheme } = useTheme();
@@ -12,7 +14,9 @@ export const Layout = ({ children }) => {
                 dark: !isLight,
             })}
         >
-            <button onClick={toggleTheme}>Toggle Theme</button>
+            <button className="change-button" onClick={toggleTheme}>
+                Toggle Theme
+            </button>
             {children}
         </div>
     );

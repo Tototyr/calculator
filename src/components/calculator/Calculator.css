@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .container {
-    background: #17171c;
-    margin: 100px auto;
+    background: var(--accent-dark);
+    margin: 50px auto;
     width: 300px;
     height: 550px;
     border-radius: 39px;
@@ -20,7 +20,7 @@
 }
 
 .button {
-    background: #2e2f38;
+    background: var(--button-dark);
     border-radius: 24px;
     color: #fff;
     width: 62px;
@@ -28,30 +28,30 @@
 }
 
 .history {
-    background: #17171c;
+    background: var(--accent-dark);
     font-size: 15px;
     color: #fff;
 }
 
 .result {
-    background: #17171c;
+    background: var(--accent-dark);
     color: #fff;
 }
 
 .button-gray {
-    background: #4e505f;
+    background: var(--button-gray);
 }
 
 .button:hover {
-    background: #4b5efc;
+    background: var(--button-blue);
     transition: all ease 0.25s;
 }
 
 .button-blue {
-    background: #4b5efc;
+    background: var(--button-blue);
 }
 
 .button-blue:hover {
-    background: #4e505f;
+    background: var(--button-dark);
     transition: all ease 0.25s;
 }

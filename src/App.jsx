@@ -6,13 +6,11 @@ import { Layout } from './components/layout/Layout';
 
 function App({ className }) {
     return (
-        <div>
-            <ThemeProvider>
-                <Layout className={cx('layout', className)}>
-                    <Calculator />
-                </Layout>
-            </ThemeProvider>
-        </div>
+        <ThemeProvider>
+            <Layout className={cx('layout', className)}>
+                <Calculator />
+            </Layout>
+        </ThemeProvider>
     );
 }
 
