@@ -7,9 +7,6 @@ import { useCalculator } from '../hooks/useCalculator';
 export const Calculator = () => {
     const { isLight, setisLight } = useTheme();
 
-    const toggleTheme = () => {
-        setisLight(!isLight);
-    };
     const {
         result,
         history,
