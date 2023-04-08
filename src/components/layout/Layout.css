@@ -4,10 +4,14 @@
     padding: 10px 10px;
     border-radius: 25px;
     color: white;
+    font-size: 17px;
+    font-weight: bold;
     background-color: var(--accent-dark);
 }
 
-.layout.light .change-button  {
+.layout.light .change-button {
     color: black;
+    font-size: 17px;
+    font-weight: bold;
     background-color: var(--accent-light);
 }

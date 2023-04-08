@@ -88,7 +88,7 @@ export const useCalculator = () => {
 
     const handleBackspaceClick = () => {
         if (result.length > 1) {
-            setResult(result.slice(0, -1));
+            setResult(result.slice(0, -13));
         } else {
             setResult('0');
         }
