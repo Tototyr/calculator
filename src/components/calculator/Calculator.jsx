@@ -23,7 +23,7 @@ export const Calculator = () => {
             <div className="history col-span-4 mb-2 text-4xl font-bold text-right">
                 {history.map((calculation, index) => (
                     <div className="history" key={index}>
-                        {calculation.previousValue} {calculation.operation}
+                        {calculation.previousValue} {calculation.operation}{' '}
                         {calculation.currentValue} = {getResult(calculation)}
                     </div>
                 ))}
@@ -57,7 +57,7 @@ export const Calculator = () => {
             <Action
                 className="button button-blue text-2xl"
                 onClick={handleOperationClick}
-                value="*"
+                value={'*'}
             >
                 *
             </Action>
@@ -93,7 +93,7 @@ export const Calculator = () => {
             >
                 +
             </Action>
-            <Action className="button text-2xl" onClick={handleNumberClick}>
+            <Action className="button text-2xl" onClick={handleNumberClick} value={'.'}>
                 .
             </Action>
             <Action className="button text-2xl" onClick={handleNumberClick} value={0}>

@@ -43,16 +43,16 @@ export const useCalculator = () => {
         const { previousValue, operation, currentValue } = calculation;
 
         if (operation === '+') {
-            return Math.round(previousValue + currentValue);
+            return (previousValue + currentValue).toFixed(3);
         } else if (operation === '-') {
-            return Math.round(previousValue - currentValue);
+            return (previousValue - currentValue).toFixed(3);
         } else if (operation === '*') {
-            return Math.round(previousValue * currentValue);
+            return (previousValue * currentValue).toFixed(3);
         } else if (operation === '/') {
             if (currentValue === 0) {
                 return '0';
             } else {
-                return Math.round(previousValue / currentValue);
+                return (previousValue / currentValue).toFixed(3);
             }
         }
     };
@@ -88,7 +88,7 @@ export const useCalculator = () => {
 
     const handleBackspaceClick = () => {
         if (result.length > 1) {
-            setResult(result.slice(0, -13));
+            setResult(result.slice(0, -1));
         } else {
             setResult('0');
         }

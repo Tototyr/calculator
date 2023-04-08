@@ -3,7 +3,11 @@ import './Action.css';
 
 export const Action = ({ onClick, value, className, children }) => {
     const handleClick = () => {
-        onClick(value);
+        if (value !== undefined) {
+            onClick(value);
+        } else {
+            onClick();
+        }
     };
 
     return (
