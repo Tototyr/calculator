@@ -15,6 +15,7 @@ export const Calculator = () => {
         handlePrecentClick,
         handleEqualClick,
         handleBackspaceClick,
+        getHistory,
         getResult,
     } = useCalculator();
 
@@ -23,8 +24,11 @@ export const Calculator = () => {
             <div className="history col-span-4 mb-2 text-4xl font-bold text-right">
                 {history.map((calculation, index) => (
                     <div className="history" key={index}>
-                        {calculation.previousValue} {calculation.operation}{' '}
-                        {calculation.currentValue} = {getResult(calculation)}
+                        {getHistory(
+                            calculation.previousValue,
+                            calculation.operation,
+                            calculation.currentValue
+                        )}
                     </div>
                 ))}
             </div>

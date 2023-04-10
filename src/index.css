@@ -2,6 +2,8 @@
     --accent-dark: #17171c;
     --accent-light: #e5e5e5;
 
+    --color-black: #000000;
+
 
     --button-blue: #4b5efc;
     --button-gray: #4e505f;
@@ -12,19 +14,19 @@
 
 .layout.light .container {
     background:  var(--accent-light);
-    color: #000000;
+    color: var( --color-black);
 }
 
 .layout.light .switch {
-    color: #000000;
+    color: var( --color-black);
 }
 
 .layout.light .result {
     background:  var(--accent-light);
-    color: #000000;
+    color: var( --color-black);
 }
 
 .layout.light .history {
     background: var(--accent-light);
-    color: #000000;
+    color: var( --color-black);
 }

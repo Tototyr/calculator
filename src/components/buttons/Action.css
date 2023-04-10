@@ -1,5 +1,5 @@
 .layout.light .button {
-    color: #000000;
+    color: var(--color-black);
     background: var(--button-white);
 }
 

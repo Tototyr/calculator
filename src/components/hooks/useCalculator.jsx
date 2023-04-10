@@ -5,6 +5,7 @@ export const useCalculator = () => {
     const [operation, setOperation] = useState(null);
     const [previousValue, setPreviousValue] = useState(null);
     const [history, setHistory] = useState([]);
+    const MAX_DELETION = -1;
 
     const handleNumberClick = (number) => {
         if (result === 0 && number !== '.') {
@@ -88,10 +89,14 @@ export const useCalculator = () => {
 
     const handleBackspaceClick = () => {
         if (result.length > 1) {
-            setResult(result.slice(0, -1));
+            setResult(result.slice(0, MAX_DELETION));
         } else {
             setResult('0');
         }
+    };
+
+    const getHistory = (previousValue, operation, currentValue) => {
+        return [previousValue, operation, currentValue, '=', result].join(' ');
     };
 
     return {
@@ -107,5 +112,6 @@ export const useCalculator = () => {
         getResult,
         handleEqualClick,
         handleBackspaceClick,
+        getHistory,
     };
 };

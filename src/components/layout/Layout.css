@@ -3,14 +3,14 @@
     display: flex;
     padding: 10px 10px;
     border-radius: 25px;
-    color: white;
+    color: var(--button-white);
     font-size: 17px;
     font-weight: bold;
     background-color: var(--accent-dark);
 }
 
 .layout.light .change-button {
-    color: black;
+    color: var( --color-black);
     font-size: 17px;
     font-weight: bold;
     background-color: var(--accent-light);
