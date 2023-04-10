@@ -1,0 +1,27 @@
+.layout.light .button {
+    color: var(--color-black);
+    background: var(--button-white);
+}
+
+.layout.light .button-gray {
+    background:  var(--button-gray);
+}
+
+.layout.light .button-blue {
+    background:  var(--button-blue);
+}
+
+.layout.light .button:hover{
+    background:   var(--button-blue);
+    transition: all ease 0.25s;
+}
+
+.layout.light .button-gray:hover {
+    background:   var(--button-blue);
+    transition: all ease 0.25s;
+}
+
+.layout.light .button-blue:hover {
+    background:  var(--button-gray);
+    transition: all ease 0.25s;
+}

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    background: var(--accent-dark);
+    margin: 50px auto;
+    width: 300px;
+    height: 550px;
+    border-radius: 39px;
+}
+
+.switch {
+    color: var(--button-white);
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.button {
+    background: var(--button-dark);
+    border-radius: 24px;
+    color: var(--button-white);
+    width: 62px;
+    height: 62px;
+}
+
+.history {
+    background: var(--accent-dark);
+    font-size: 15px;
+    color: var(--button-white);
+}
+
+.result {
+    background: var(--accent-dark);
+    color: var(--button-white);
+}
+
+.button-gray {
+    background: var(--button-gray);
+}
+
+.button:hover {
+    background: var(--button-blue);
+    transition: all ease 0.25s;
+}
+
+.button-blue {
+    background: var(--button-blue);
+}
+
+.button-blue:hover {
+    background: var(--button-dark);
+    transition: all ease 0.25s;
+}
